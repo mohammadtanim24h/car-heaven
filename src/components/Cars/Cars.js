@@ -9,17 +9,23 @@ const Cars = () => {
             .then(res => res.json())
             .then(data => setCars(data))
     }, []);
+
+    const [cart, setCart] = useState([]);
+    const handleAddToCart = car => {
+        const newCart = [...cart, car];
+        setCart(newCart);
+    }
     return (
         <div className='row mt-5'>
             <div className='cars-container col-lg-9'>
-                <div className='row mx-auto'>
+                <div className='row'>
                     {
-                        cars.map(car => <Car key={car.id} car={car}></Car>)
+                        cars.map(car => <Car key={car.id} handleAddToCart={handleAddToCart} car={car}></Car>)
                     }
                 </div>
             </div>
             <div className='cart col-lg-3'>
-                <h2>cart</h2>
+                <h2>{cart.length}</h2>
             </div>
         </div>
     );
