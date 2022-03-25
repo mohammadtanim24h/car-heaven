@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Car from '../Car/Car';
+import Cart from '../Cart/Cart';
 import './Cars.css';
 
 const Cars = () => {
@@ -25,7 +26,9 @@ const Cars = () => {
                 </div>
             </div>
             <div className='cart col-lg-3'>
-                <h2>{cart.length}</h2>
+                {
+                    cart.map(cartItem => <Cart car={cartItem} key={cartItem.id}></Cart>)
+                }
             </div>
         </div>
     );

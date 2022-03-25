@@ -1,0 +1,14 @@
+.cart-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cart-container img {
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid rgb(204, 199, 199);
+}
