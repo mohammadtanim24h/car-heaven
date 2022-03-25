@@ -11,12 +11,18 @@ const Cars = () => {
             .then(data => setCars(data))
     }, []);
 
+    // Add Items to cart
     const [cart, setCart] = useState([]);
     const handleAddToCart = car => {
         if(cart.length < 4) {
             const newCart = [...cart, car];
             setCart(newCart);
         }
+    }
+
+    // Empty the cart
+    const emptyCart = () => {
+        setCart([]);
     }
     return (
         <div className='row mt-5'>
@@ -34,7 +40,7 @@ const Cars = () => {
                 }
                 <div className='text-center'>
                     <button className='my-3 me-2 btn btn-outline-success'>Choose 1 for me</button>
-                    <button className='btn btn-outline-danger'>Choose Again</button>
+                    <button onClick={emptyCart} className='btn btn-outline-danger'>Choose Again</button>
                 </div>
             </div>
         </div>
