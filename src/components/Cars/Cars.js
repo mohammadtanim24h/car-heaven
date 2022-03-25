@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Car from '../Car/Car';
 import './Cars.css';
 
 const Cars = () => {
@@ -8,13 +9,16 @@ const Cars = () => {
             .then(res => res.json())
             .then(data => setCars(data))
     }, []);
-    console.log(cars);
     return (
         <div className='row'>
-            <div className='cars-container col-lg-7'>
-                <h2>Cars</h2>
+            <div className='cars-container col-lg-8'>
+                <div className='row'>
+                    {
+                        cars.map(car => <Car key={car.id} car={car}></Car>)
+                    }
+                </div>
             </div>
-            <div className='cart col-lg-5'>
+            <div className='cart col-lg-4'>
                 <h2>cart</h2>
             </div>
         </div>
