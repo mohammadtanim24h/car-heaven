@@ -10,15 +10,15 @@ const Cars = () => {
             .then(data => setCars(data))
     }, []);
     return (
-        <div className='row'>
-            <div className='cars-container col-lg-8'>
-                <div className='row'>
+        <div className='row mt-5'>
+            <div className='cars-container col-lg-9'>
+                <div className='row mx-auto'>
                     {
                         cars.map(car => <Car key={car.id} car={car}></Car>)
                     }
                 </div>
             </div>
-            <div className='cart col-lg-4'>
+            <div className='cart col-lg-3'>
                 <h2>cart</h2>
             </div>
         </div>

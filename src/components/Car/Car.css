@@ -1,0 +1,24 @@
+.car-card {
+    box-shadow: 3px 3px 10px gray;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+}
+
+.car-card img {
+    width: 280px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 480px){
+    .car-card {
+        width: 300px;
+    }
+    .car-card img {
+        width: 280px;
+    }
+}
