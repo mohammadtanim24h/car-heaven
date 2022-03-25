@@ -10,6 +10,7 @@ const Car = ({ car }) => {
             <div>
                 <h5 className="mt-2">{name}</h5>
                 <p>${price}</p>
+                <button className="btn-cart">Add To Cart</button>
             </div>
         </div>
     );

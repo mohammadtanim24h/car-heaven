@@ -14,6 +14,22 @@
     border-radius: 5px;
 }
 
+.btn-cart {
+    outline: 0;
+    border: 3px solid #353D46;
+    padding: 8px 16px;
+    width: 100%;
+    background-color: #353D46;
+    color: #fff;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.btn-cart:hover {
+    background-color: transparent;
+    color: #353D46;
+}
+
 @media screen and (max-width: 480px){
     .car-card {
         width: 300px;
