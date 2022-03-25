@@ -1,8 +1,11 @@
 .cart-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    box-shadow: 2px 2px 5px gray;
+    padding: 12px;
+    border-radius: 10px;
 }
 
 .cart-container img {

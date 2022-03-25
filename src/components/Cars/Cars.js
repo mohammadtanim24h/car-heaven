@@ -13,8 +13,10 @@ const Cars = () => {
 
     const [cart, setCart] = useState([]);
     const handleAddToCart = car => {
-        const newCart = [...cart, car];
-        setCart(newCart);
+        if(cart.length < 4) {
+            const newCart = [...cart, car];
+            setCart(newCart);
+        }
     }
     return (
         <div className='row mt-5'>
@@ -25,10 +27,15 @@ const Cars = () => {
                     }
                 </div>
             </div>
-            <div className='cart col-lg-3'>
+            <div className='cart col-lg-3 p-3'>
+                <h2 className='text-secondary text-center'>Selected Cars</h2>
                 {
                     cart.map(cartItem => <Cart car={cartItem} key={cartItem.id}></Cart>)
                 }
+                <div className='text-center'>
+                    <button className='my-3 me-2 btn btn-outline-success'>Choose 1 for me</button>
+                    <button className='btn btn-outline-danger'>Choose Again</button>
+                </div>
             </div>
         </div>
     );

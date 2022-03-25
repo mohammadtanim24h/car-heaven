@@ -5,10 +5,10 @@ const Cart = ({ car }) => {
     const {name, img} = car;
     return (
         <div className="cart-container">
-            <img src={img} alt="" />
             <div>
                 <h4>{name}</h4>
             </div>
+            <img src={img} alt="" />
         </div>
     );
 };
