@@ -20,6 +20,19 @@ const Cars = () => {
         }
     }
 
+    // Choose one from cart 
+    const chooseOne = () => {
+        if(cart.length === 4) {
+            const num = Math.random() * 4;
+            const numInt = Math.floor(num);
+            const randomCar = cart[numInt];
+            setCart([randomCar]);
+        }
+        else {
+            alert('Please select 4 cars');
+        }
+    }
+
     // Empty the cart
     const emptyCart = () => {
         setCart([]);
@@ -39,7 +52,7 @@ const Cars = () => {
                     cart.map(cartItem => <Cart car={cartItem} key={cartItem.id}></Cart>)
                 }
                 <div className='text-center'>
-                    <button className='my-3 me-2 btn btn-outline-success'>Choose 1 for me</button>
+                    <button onClick={chooseOne} className='my-3 me-2 btn btn-outline-success'>Choose 1 for me</button>
                     <button onClick={emptyCart} className='btn btn-outline-danger'>Choose Again</button>
                 </div>
             </div>
