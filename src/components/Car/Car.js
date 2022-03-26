@@ -6,7 +6,7 @@ import "./Car.css";
 const Car = ({ car, handleAddToCart }) => {
     const { name, img, price } = car;
     return (
-        <div className="car-card col-md-4">
+        <div className="car-card">
             <img className="img-fluid" src={img} alt="car" />
             <div>
                 <h4 className="mt-2">{name}</h4>

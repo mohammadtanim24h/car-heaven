@@ -1,4 +1,25 @@
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
 .cart {
     box-shadow: 2px 2px 15px slategrey;
     border-radius: 10px;
+}
+
+.cars-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 480px){
+    .main-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .cars-container {
+        grid-template-columns: 1fr;
+        order: 3;
+    }
 }

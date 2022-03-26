@@ -33,15 +33,13 @@ const Cars = () => {
         setCart([]);
     }
     return (
-        <div className='row mt-5'>
-            <div className='cars-container col-lg-9'>
-                <div className='row'>
-                    {
-                        cars.map(car => <Car key={car.id} handleAddToCart={handleAddToCart} car={car}></Car>)
-                    }
-                </div>
+        <div className='main-section mt-5'>
+            <div className='cars-container'>
+                {
+                    cars.map(car => <Car key={car.id} handleAddToCart={handleAddToCart} car={car}></Car>)
+                }
             </div>
-            <div className='cart col-lg-3 p-3'>
+            <div className='cart p-3'>
                 <h2 className='text-secondary text-center'>Selected Cars</h2>
                 {
                     cart.map(cartItem => <Cart car={cartItem} key={cartItem.id}></Cart>)
