@@ -1,0 +1,18 @@
+.quesion-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.question {
+    background-color: #353D46;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #FFFEFF;
+}
+
+@media screen and (max-width: 480px) {
+    .quesion-container {
+        grid-template-columns: 1fr;
+    }
+}
