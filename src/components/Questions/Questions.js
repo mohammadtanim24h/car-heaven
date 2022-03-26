@@ -10,7 +10,7 @@ const Questions = () => {
             </div>
             <div className='question'>
                 <h3>Props Vs State</h3>
-                <p>States contain data or information that can change depending on our interaction in a website. Props are used to send data from one component to another component. Props are read-only and immutable which means we cannot change it. On the other hand State is mutable and it can change. State is handled inside a component and props are handled outside of a component</p>
+                <p>States contain data or information that can change depending on our interaction on a website. Props are used to send data from one component to another component. Props are read-only and immutable which means we cannot change them. On the other hand, State is mutable and it can change. State is handled inside a component and props are handled outside of a component.</p>
             </div>
         </div>
     );
