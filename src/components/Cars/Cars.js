@@ -22,15 +22,10 @@ const Cars = () => {
 
     // Choose one from cart 
     const chooseOne = () => {
-        if(cart.length === 4) {
-            const num = Math.random() * 4;
-            const numInt = Math.floor(num);
-            const randomCar = cart[numInt];
-            setCart([randomCar]);
-        }
-        else {
-            alert('Please select 4 cars');
-        }
+        const num = Math.random() * (cart.length - 1);
+        const numInt = Math.round(num);
+        const randomCar = cart[numInt];
+        setCart([randomCar]);
     }
 
     // Empty the cart
