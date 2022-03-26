@@ -14,9 +14,12 @@ const Cars = () => {
     // Add Items to cart
     const [cart, setCart] = useState([]);
     const handleAddToCart = car => {
-        if(cart.length < 4) {
-            const newCart = [...cart, car];
-            setCart(newCart);
+        const exists = cart.find(carDetails => carDetails.id === car.id)
+        if(!exists){
+            if(cart.length < 4) {
+                const newCart = [...cart, car];
+                setCart(newCart);
+            }
         }
     }
 
