@@ -26,7 +26,10 @@ const Cars = () => {
         const numInt = Math.round(num);
         const randomCar = cart[numInt];
         setCart([randomCar]);
+        randomize();
     }
+    const [result, setResult] = useState('Selected Cars')
+    const randomize = () => setResult('Yahoo!! This is our pick for you!')
 
     // Empty the cart
     const emptyCart = () => {
@@ -40,7 +43,7 @@ const Cars = () => {
                 }
             </div>
             <div className='cart p-3'>
-                <h2 className='text-secondary text-center'>Selected Cars</h2>
+                <h2 className='text-secondary text-center'>{result}</h2>
                 {
                     cart.map(cartItem => <Cart car={cartItem} key={cartItem.id}></Cart>)
                 }
