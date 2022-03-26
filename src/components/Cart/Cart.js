@@ -4,9 +4,9 @@ import './Cart.css';
 const Cart = ({ car }) => {
     const {name, img} = car;
     return (
-        <div className="cart-container">
+        <div className="cart-container text-center mx-auto">
             <div>
-                <h4>{name}</h4>
+                <h5>{name}</h5>
             </div>
             <img src={img} alt="" />
         </div>

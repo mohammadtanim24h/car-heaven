@@ -1,6 +1,6 @@
 .main-section {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr 1.5fr;
 }
 
 .cart {

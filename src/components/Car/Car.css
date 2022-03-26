@@ -3,12 +3,12 @@
     margin: 20px;
     padding: 10px;
     border-radius: 10px;
-    width: 320px;
+    width: 280px;
     text-align: center;
 }
 
 .car-card img {
-    width: 280px;
+    width: 240px;
     height: 160px;
     object-fit: cover;
     border-radius: 5px;
